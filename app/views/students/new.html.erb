@@ -1,0 +1,11 @@
+<h1>新規登録（学生）</h1>
+
+<%= form_tag(:action => 'create') do %>
+  名前：<%= text_field_tag :name %><br />
+  メールアドレス：<%= text_field_tag :email %><br />
+  パスワード：<%= password_field_tag :pass %><br />
+  スキル：<%= text_field_tag :skill %><br />
+  アピールポイント：<%= text_field_tag :apeal %><br />
+  <%= hidden_field_tag "authenticity_token", form_authenticity_token %>
+  <%= submit_tag '登録', name: "submit" %><br />
+<% end %>

@@ -1,0 +1,5 @@
+<% if session[:name] != nil%>
+  <%= session[:name] %>がログイン中です</br>
+  <%= link_to "ログアウト", :action => "logout" %>
+<% end %>
+<%= yield %>

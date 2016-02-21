@@ -1,0 +1,9 @@
+<h1>Login Page</h1>
+
+<%= form_tag({method: "get"}) do %>
+  メールアドレス：<%= text_field_tag :email %><br />
+  パスワード：<%= password_field_tag :pass %><br />
+
+<%= submit_tag 'ログイン', :name => "login_flag"%><br />
+<% end %>
+<%= link_to "新規登録", 'new' %>

@@ -1,0 +1,10 @@
+<h1>新規登録（企業）</h1>
+
+<%= form_tag(:action => 'create_bite') do %>
+  企業名：<%= text_field_tag :name %><br />
+  メールアドレス：<%= text_field_tag :email %><br />
+  パスワード：<%= password_field_tag :pass %><br />
+  会社の概要：<%= text_field_tag :outline %><br />
+  <%= hidden_field_tag "authenticity_token", form_authenticity_token %>
+  <%= submit_tag '登録', name: "submit" %><br />
+<% end %>
